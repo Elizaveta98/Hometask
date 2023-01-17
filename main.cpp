@@ -1,25 +1,29 @@
-//Hometask Рузанова Елизавета
-// 1. Сделать заголовочный файл с некоторыми математическими функциями.
+// Hometask Рузанова Елизавета
+// Сделать заголовочный файл с функциями по разделению массива на 2 части.
 
-#include <iostream>
-#include "functions.h"
+#include "Splitting the array.h"
 
 using namespace std;
 
-
 int main() {
-    int size;
-    cout << "Enter the size of the array - ";
-    cin >> size;
-    int arr[size];
 
-    RandomArray(arr, size, 0, 10);
-    PrintArray(arr,size, '|' );
 
-    int max= FindMax(arr,size);
-    cout << "Max number - " << max << endl;
-    int min = FindMin(arr, size);
-    cout << "Min number - " << min << endl;
+    const int SIZE = 10;
+    const int SIZE_2 = SIZE / 2;
+    int arr_1[SIZE_2];
+    int arr_2[SIZE_2];
+
+    int arraySource[SIZE];
+    InputArray(arraySource, SIZE);
+    PrintArray(arraySource, SIZE);
+
+    SplitArray1(arraySource,SIZE_2, arr_1);
+    SplitArray2(arraySource,  SIZE_2, arr_2);
+
+    PrintArray(arr_1, SIZE_2);
+    PrintArray(arr_2, SIZE_2);
+
+
 
 
 
